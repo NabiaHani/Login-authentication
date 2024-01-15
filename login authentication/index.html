@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Custom css -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./image/favicon.jpeg" type="image/x-icon">
+
+
+  <title>Login Authentication</title>
+</head>
+
+<body>
+
+  <div class="container" id="loginForm">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <button onclick="login()">Login</button>
+    <p class="error-message" id="loginErrorMessage"></p>
+    <p class="success-message" id="loginSuccessMessage"></p>
+    <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+  </div>
+
+  <div class="container" id="registerForm" style="display: none;">
+    <h2>Register</h2>
+    <input type="text" id="newUsername" placeholder="New Username"><br><br>
+    <input type="password" id="newPassword" placeholder="New Password"><br><br>
+    <button onclick="register()">Register</button>
+    <p class="error-message" id="registerErrorMessage"></p>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+
+  <div class="container" id="securedPage" style="display: none;">
+    <h2>Secured Page</h2>
+    <p>Welcome, <span id="loggedInUser"></span>! You have successfully logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+</body>
+
+<script src="./app.js"></script>
+
+</html>
